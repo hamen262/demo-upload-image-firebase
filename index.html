@@ -44,6 +44,8 @@
         const metadata = {
             contentType: file.type
         }
+        
+//         lấy link url bỏ vào tag img
         const task = ref.child(name).put(file, metadata);
         task.then(snapshot => snapshot.ref.getDownloadURL()).then(url => {
             console.log(url);
